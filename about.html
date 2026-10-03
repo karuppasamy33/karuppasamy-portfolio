@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% set active = 'about' %}
+{% block title %}About | S. Karuppasamy{% endblock %}
+{% block content %}
+<section class="about-section">
+    <div class="container">
+        <h2 class="heading text-center mb-5">About <span>Me</span></h2>
+
+        <div class="row justify-content-center mb-5 reveal">
+            <div class="col-lg-9">
+                <div class="custom-card p-4 rounded shadow">
+                    <h4>Professional Summary</h4>
+                    <p>B.Sc. Computer Science graduate with a strong interest in Data Analytics and Web Development.
+                    Familiar with Microsoft Excel, SQL, Python, Power BI, HTML, CSS and JavaScript through online learning
+                    and hands-on practice. Working knowledge of data analysis, data visualization, database concepts and
+                    web development fundamentals.</p>
+                    <h5>Career Objective</h5>
+                    <p class="mb-0">To begin my career in Data Analytics where I can apply my Computer Science knowledge and
+                    analytical skills, gain hands-on industry experience, and continuously develop my technical expertise
+                    while contributing to organizational goals.</p>
+                </div>
+            </div>
+        </div>
+
+        <span class="scroll-anchor" id="education"></span>
+        <h3 class="section-title text-center mb-4"><i class="fa-solid fa-graduation-cap me-2"></i>Education</h3>
+        <div class="row justify-content-center mb-5 reveal">
+            <div class="col-lg-9">
+                <div class="custom-card p-4 rounded shadow">
+                    <div class="d-flex justify-content-between flex-wrap gap-2">
+                        <h4>B.Sc. Computer Science</h4>
+                        <span class="badge bg-custom-highlight text-dark align-self-start">2026</span>
+                    </div>
+                    <h5>St. Xavier's College, Palayamkottai</h5>
+                    <p class="mb-0"><strong>CGPA:</strong> 7.07 / 10</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="skills-section" id="skills">
+        <div class="container">
+            <h3 class="section-title text-center mb-2"><i class="fa-solid fa-code me-2"></i>Technical Skills</h3>
+            <p class="skills-subtitle text-center mb-5">Tools and skills I've been learning and practising.</p>
+
+            {% set groups = [
+              ('Data Analytics', 'fa-chart-column', [
+                ('Excel','fa-file-excel','#21a366'),('SQL','fa-database','#00b4ff'),('Python','fa-brands fa-python','#ffd43b'),
+                ('Power BI','fa-chart-pie','#f2c811'),('Data Cleaning','fa-broom','#00eeff'),('Data Visualization','fa-chart-line','#00eeff'),
+                ('Data Analysis','fa-magnifying-glass-chart','#00eeff'),('Data Interpretation','fa-lightbulb','#00eeff')]),
+              ('Web Development', 'fa-globe', [
+                ('HTML','fa-brands fa-html5','#e44d26'),('CSS','fa-brands fa-css3-alt','#2965f1'),('JavaScript','fa-brands fa-js','#f7df1e'),('GitHub','fa-brands fa-github','#ffffff')]),
+              ('Core Skills', 'fa-brain', [
+                ('Problem Solving','fa-puzzle-piece','#00eeff'),('Analytical Thinking','fa-chart-simple','#00eeff'),('Logical Thinking','fa-diagram-project','#00eeff'),
+                ('CS Fundamentals','fa-microchip','#00eeff'),('Communication','fa-comments','#00eeff'),('Quick Learning','fa-rocket','#00eeff')])
+            ] %}
+            {% for title, icon, items in groups %}
+            <div class="skill-category-block mb-5 reveal">
+                <h4 class="skill-category-title"><i class="fa-solid {{ icon }}"></i>{{ title }}</h4>
+                <div class="row g-3 mt-1">
+                    {% for name, ic, color in items %}
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="skill-card">
+                            <i class="{% if 'fa-brands' in ic %}{{ ic }}{% else %}fa-solid {{ ic }}{% endif %} skill-icon" style="color:{{ color }};"></i>
+                            <span>{{ name }}</span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="cert-section" id="learning">
+        <div class="container">
+            <h3 class="section-title text-center mb-5"><i class="fa-solid fa-certificate me-2"></i>Certifications &amp; Online Learning</h3>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-5 reveal">
+                    <div class="cert-card">
+                        <span class="cert-issuer-badge scholarhat-badge">Online Learning</span>
+                        <h5 class="cert-title">Data Analytics</h5>
+                        <p class="cert-meta"><i class="fa-solid fa-chart-column"></i>Excel, SQL, Python, Power BI</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-5 reveal">
+                    <div class="cert-card">
+                        <span class="cert-issuer-badge udemy-badge">Online Learning</span>
+                        <h5 class="cert-title">Web Development</h5>
+                        <p class="cert-meta"><i class="fa-solid fa-globe"></i>HTML, CSS, JavaScript</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills-section pb-5" id="strengths">
+        <div class="container">
+            <h3 class="section-title text-center mb-4"><i class="fa-solid fa-bolt me-2"></i>Strengths</h3>
+            <div class="row g-3 justify-content-center">
+                {% for s in ['Analytical and problem-solving mindset','Self-motivated and quick learner','Willingness to learn new technologies','Adaptable and hardworking','Strong interest in Data Analytics','Team-oriented approach'] %}
+                <div class="col-md-6 col-lg-4 reveal"><div class="skill-card flex-row justify-content-start text-start"><i class="fa-solid fa-circle-check" style="color:var(--main-color)"></i><span>{{ s }}</span></div></div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</section>
+{% endblock %}

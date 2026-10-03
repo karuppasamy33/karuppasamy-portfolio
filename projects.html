@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% set active = 'projects' %}
+{% block title %}Projects | S. Karuppasamy{% endblock %}
+{% block content %}
+<section class="projects-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="heading">My <span>Projects</span></h2>
+            <p class="projects-subtitle mt-3">Things I've built and practised while learning data analytics and web development.</p>
+        </div>
+
+        <div class="project-block reveal">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-7 project-info">
+                    <div class="project-number">01</div>
+                    <h3 class="project-title">Personal Portfolio Website</h3>
+                    <p class="project-desc">A personal portfolio website to showcase my <strong>education, technical skills, projects and career interests</strong>.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag"><i class="fa-brands fa-html5"></i>HTML</span>
+                        <span class="tech-tag"><i class="fa-brands fa-css3-alt"></i>CSS</span>
+                        <span class="tech-tag"><i class="fa-brands fa-js"></i>JavaScript</span>
+                        <span class="tech-tag"><i class="fa-brands fa-github"></i>GitHub</span>
+                    </div>
+                    <div class="project-highlights">
+                        <div class="highlight-item"><i class="fa-solid fa-circle-check"></i>HTML &amp; CSS used to structure and style pages</div>
+                        <div class="highlight-item"><i class="fa-solid fa-circle-check"></i>JavaScript for interaction and functionality</div>
+                        <div class="highlight-item"><i class="fa-solid fa-circle-check"></i>Version-controlled and managed on GitHub</div>
+                        <div class="highlight-item"><i class="fa-solid fa-circle-check"></i>Responsive, mobile-friendly layout</div>
+                    </div>
+                    <div class="project-links mt-4">
+                        <a class="btn-project-primary" href="https://github.com/karuppasamy33/karuppasamy-portfolio" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i>View on GitHub</a>
+                        <span class="project-status-badge status-completed"><i class="fa-solid fa-circle-check"></i>Completed</span>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="project-video-placeholder web-placeholder">
+                        <i class="fa-solid fa-laptop-code placeholder-icon"></i>
+                        <p>Portfolio Website</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-block reveal">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-7 project-info">
+                    <div class="project-number">02</div>
+                    <h3 class="project-title">Data Analytics Practice Projects</h3>
+                    <p class="project-desc">Hands-on practice in <strong>data analysis and visualization</strong>, exploring datasets to find patterns, trends and useful insights.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag"><i class="fa-solid fa-file-excel"></i>Excel</span>
+                        <span class="tech-tag"><i class="fa-solid fa-database"></i>SQL</span>
+                        <span class="tech-tag"><i class="fa-brands fa-python"></i>Python</span>
+                        <span class="tech-tag"><i class="fa-solid fa-chart-pie"></i>Power BI</span>
+                    </div>
+                    <div class="project-highlights">
+                        <div class="highlight-item"><i class="fa-solid fa-circle-check"></i>Data cleaning and transformation</div>
+                        <div class="highlight-item"><i class="fa-solid fa-circle-check"></i>Data interpretation techniques</div>
+                        <div class="highlight-item"><i class="fa-solid fa-circle-check"></i>Pattern and trend discovery</div>
+                        <div class="highlight-item"><i class="fa-solid fa-circle-check"></i>Self-directed practice and online learning</div>
+                    </div>
+                    <div class="project-links mt-4">
+                        <span class="project-status-badge status-inprogress"><i class="fa-solid fa-spinner"></i>Ongoing</span>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="project-video-placeholder data-placeholder">
+                        <i class="fa-solid fa-chart-column placeholder-icon"></i>
+                        <p>Data Analytics</p>
+                        <span class="coming-soon-badge">More coming soon</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% set active = 'contact' %}
+{% block title %}Contact | S. Karuppasamy{% endblock %}
+{% block content %}
+<section class="about-section">
+    <div class="container">
+        <h2 class="heading text-center mb-3">Get In <span>Touch</span></h2>
+        <p class="projects-subtitle text-center mb-5">Open to Data Analyst, Junior Data Analyst, Data Analytics Intern, Business Intelligence Intern and Web Development Intern roles.</p>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4 reveal"><a class="contact-card" href="mailto:smilekarthik017@gmail.com"><i class="fa-solid fa-envelope"></i><h5>Email</h5><span>smilekarthik017@gmail.com</span></a></div>
+            <div class="col-md-4 reveal"><a class="contact-card" href="tel:+917339691634"><i class="fa-solid fa-phone"></i><h5>Phone</h5><span>+91 73396 91634</span></a></div>
+            <div class="col-md-4 reveal"><a class="contact-card" href="https://github.com/karuppasamy33" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i><h5>GitHub</h5><span>karuppasamy33</span></a></div>
+        </div>
+        <div class="text-center mt-5">
+            <a href="{{ url_for('static', filename='files/Karuppasamy_Resume.pdf') }}" download class="btn-custom"><i class="fa-solid fa-download me-2"></i>Download CV</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
